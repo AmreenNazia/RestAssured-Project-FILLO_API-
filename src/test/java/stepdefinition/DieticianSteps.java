@@ -1,6 +1,7 @@
 package stepdefinition;
 
 import java.io.FileNotFoundException;
+
 import java.util.List;
 import java.util.Map;
 
@@ -26,11 +27,13 @@ public class DieticianSteps extends RestUtils{
 	List<Map<String,String>> testdata;
 	String reqbody;
 	LoginPojo loginpojo = new LoginPojo();
+	String username;
+	String password;
 	
 	@Given("Collects the test data using FilloAPI with scenario name {string}")
 	public void collects_the_test_data_using_fillo_api_with_scenario_name(String Scenario) {
 		
-		String dieticianQuery = "Select * From dietician Where Scenario != '' AND Scenario = '"+Scenario+"'";
+		String dieticianQuery = "Select * From dietician Where Scenario = '"+Scenario+"'";
 		testdata = ExcelReader.getExcelDataWithFilloAPI(apiconstant.PATH, dieticianQuery);
 		for(Map<String,String> data : testdata)
 		{
@@ -49,7 +52,8 @@ public class DieticianSteps extends RestUtils{
 			dieticianpojo.setEndpoint(data.get("endpoint"));
 			dieticianpojo.setExpectedStatuscode(data.get("expectedCode"));
 			dieticianpojo.setDieticianIdForPatient(data.get("dieticianIdForPatient"));
-			
+			dieticianpojo.setUsername(data.get("username"));
+			dieticianpojo.setPassword(data.get("password"));
 			reqbody = new Gson().toJson(dieticianpojo);
 			
 			 
@@ -72,18 +76,30 @@ public class DieticianSteps extends RestUtils{
 		request = given().spec(requestSpecification()).body(reqbody);
 		response = request.header("Authorization", "Bearer " +Tokens.TokenMap.get("AdminToken")).when().post(dieticianpojo.getEndpoint());
 	    response.then().log().all().extract(); 
-	    String dieticianId = response.path("id");
-	    if(dieticianpojo.getScenario()=="valid_data01")
+		}
+	   
+	    if(dieticianpojo.getScenario().equalsIgnoreCase("valid_data01"))
 	    {
+	    	 String dieticianId = response.path("id");
 	    Tokens.dietIdMap.put(dieticianpojo.dieticianId, dieticianId);
+	 
+	    
 		}
-	    else if(dieticianpojo.getScenario()=="valid_data02")
+	    else if(dieticianpojo.getScenario().equalsIgnoreCase("valid_data02"))
 	    {
-	    Tokens.dietIdMap.put(dieticianpojo.dieticianIdForPatient, dieticianId);
-		}
+	    String dieticianId01 = response.path("id");
+	    Tokens.dietIdMap.put(dieticianpojo.dieticianIdForPatient, dieticianId01); 
+	    
+	       username = response.path("email");
+	       password = response.path("password");
+	       
+	       Tokens.dietcredentials.put("username",username);
+	       Tokens.dietcredentials.put("password", password);
+ 
+	     	}
 		}
 	    
-	}
+	
 
 	@Then("User validates with expected code and response body")
 	public void user_validates_with_expected_code_and_response_body() {
@@ -91,5 +107,41 @@ public class DieticianSteps extends RestUtils{
 		 Assert.assertEquals(response.getStatusCode(), Integer.parseInt(dieticianpojo.getExpectedStatuscode()));
 	    
 	}
+	//Dietician Token
+	@Given("Collects test data using FilloAPI with scenario name {string}")
+	public void collects_test_data_using_fillo_api_with_scenario_name(String Scenario) {
+
+		String dieticianQuery = "Select * From dietician Where Scenario = '"+Scenario+"'";
+		testdata = ExcelReader.getExcelDataWithFilloAPI(apiconstant.PATH, dieticianQuery);
+		
+		for(Map<String,String> data : testdata) {
+		dieticianpojo.setUsername(Tokens.dietcredentials.get("username"));
+		dieticianpojo.setPassword(Tokens.dietcredentials.get("password"));
+		dieticianpojo.setExpectedStatuscode(data.get("expectedCode"));
+		dieticianpojo.setEndpoint2(data.get("endpoint"));
+		reqbody = new Gson().toJson(dieticianpojo);
+		System.out.println(reqbody.toString());
+		
+		}
+	}
+
+	@When("User sends HTTP POST request with the request body")
+	public void user_sends_http_post_request_with_the_request_body() throws FileNotFoundException {
+	    request = given().spec(requestSpecification()).body(reqbody);
+	    response = request.header("Authorization","Bearer "+Tokens.TokenMap.get("AdminToken")).when().post(dieticianpojo.getEndpoint2());
+	    response.then().log().all().extract();
+	    
+	    String dieticiantoken = response.path("token");
+	    
+	    Tokens.TokenMap.put("dieticianToken",dieticiantoken);
+	    System.out.println(Tokens.TokenMap.get("dieticianToken"));
+	}
+
+	@Then("User validate with expected code and response body")
+	public void user_validate_with_expected_code_and_response_body() {
+		Assert.assertEquals(response.getStatusCode(), Integer.parseInt(dieticianpojo.getExpectedStatuscode()));
+	}
+
+
 
 }

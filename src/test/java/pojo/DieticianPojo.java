@@ -20,5 +20,8 @@ public class DieticianPojo {
 	public String endpoint;
 	public String expectedStatuscode;
 	public String dieticianIdForPatient;
+	public String username;
+	public String password;
+	public String endpoint2;
 
 }

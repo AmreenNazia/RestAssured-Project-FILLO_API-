@@ -24,7 +24,6 @@ public class ExcelReader {
 			recordset = con.executeQuery(querry);
 			allRowsOfTestData = new ArrayList<Map<String, String>>();
 			while (recordset.next()) {
-				
 				testData = new TreeMap<String, String>(String.CASE_INSENSITIVE_ORDER);
 				for (String field : recordset.getFieldNames()) {
 					testData.put(field, recordset.getField(field));
