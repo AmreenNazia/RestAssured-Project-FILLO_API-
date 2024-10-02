@@ -1,0 +1,143 @@
+Request method:	POST
+Request URI:	http://localhost:8081/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json, application/javascript, text/javascript, text/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "username": "admin",
+    "password": "$3cr3t1234!",
+    "Scenario": "valid_Credentials",
+    "endpoint": "/auth/login",
+    "Method": "POST",
+    "expectedStatusCode": "200",
+    "tokenName": "AdminToken"
+}
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Tue, 01 Oct 2024 15:14:35 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "token": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTcyNzc5NTY3NSwiZXhwIjoxNzI3Nzk2Mjc1fQ.Q3wI_iFAPrthu3EXatodzz3iDxs3rBgcmqzV8qigD0oalrvAmyLcYhgGTNb_l9DIAiaPeJnfhD_oy4ZTHjHZcUBVAZXYxWZFiSg9NFDERRejiwgZ_aRtPfvIBuErNEubsyDRn88WtUXZdBvnnxoPv58sRfKxi0eH46lkueONv8Q"
+}
+Request method:	POST
+Request URI:	http://localhost:8081/v1/dieticians
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json, application/javascript, text/javascript, text/json
+				Authorization=Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTcyNzc5NTY3NSwiZXhwIjoxNzI3Nzk2Mjc1fQ.Q3wI_iFAPrthu3EXatodzz3iDxs3rBgcmqzV8qigD0oalrvAmyLcYhgGTNb_l9DIAiaPeJnfhD_oy4ZTHjHZcUBVAZXYxWZFiSg9NFDERRejiwgZ_aRtPfvIBuErNEubsyDRn88WtUXZdBvnnxoPv58sRfKxi0eH46lkueONv8Q
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "Scenario": "valid_data02",
+    "firstName": "Dietician",
+    "lastName": "Kumar",
+    "contactNumber": "209-929-6976",
+    "dateOfBirth": "73/20/6770",
+    "email": "di2etician102@gmail.com",
+    "hospitalName": "Joshephs",
+    "hospitalStreet": "SE",
+    "hospitalCity": "Chicago",
+    "hospitalZipCode": "111111",
+    "education": "MS",
+    "dieticianId": "dieticianIdForPatient",
+    "endpoint": "/v1/dieticians",
+    "expectedStatuscode": "201",
+    "username": "",
+    "password": ""
+}
+HTTP/1.1 201 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Tue, 01 Oct 2024 15:14:35 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "id": "b58565f0-e535-4543-be4e-b008552d5b40",
+    "firstName": "Dietician",
+    "lastName": "Kumar",
+    "contactNumber": "209-929-6976",
+    "dateOfBirth": "73/20/6770",
+    "email": "di2etician102@gmail.com",
+    "password": "5260a4af1db34ebdbf34ab3facedc3d3",
+    "hospitalName": "Joshephs",
+    "hospitalStreet": "SE",
+    "hospitalCity": "Chicago",
+    "hospitalZipCode": "111111",
+    "education": "MS"
+}
+Request method:	POST
+Request URI:	http://localhost:8081/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json, application/javascript, text/javascript, text/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "username": "admin",
+    "password": "$3cr3t1234!",
+    "Scenario": "valid_Credentials",
+    "endpoint": "/auth/login",
+    "Method": "POST",
+    "expectedStatusCode": "200",
+    "tokenName": "AdminToken"
+}
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Tue, 01 Oct 2024 15:14:35 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "token": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTcyNzc5NTY3NSwiZXhwIjoxNzI3Nzk2Mjc1fQ.Q3wI_iFAPrthu3EXatodzz3iDxs3rBgcmqzV8qigD0oalrvAmyLcYhgGTNb_l9DIAiaPeJnfhD_oy4ZTHjHZcUBVAZXYxWZFiSg9NFDERRejiwgZ_aRtPfvIBuErNEubsyDRn88WtUXZdBvnnxoPv58sRfKxi0eH46lkueONv8Q"
+}
+Request method:	POST
+Request URI:	http://localhost:8081/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json, application/javascript, text/javascript, text/json
+				Authorization=Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTcyNzc5NTY3NSwiZXhwIjoxNzI3Nzk2Mjc1fQ.Q3wI_iFAPrthu3EXatodzz3iDxs3rBgcmqzV8qigD0oalrvAmyLcYhgGTNb_l9DIAiaPeJnfhD_oy4ZTHjHZcUBVAZXYxWZFiSg9NFDERRejiwgZ_aRtPfvIBuErNEubsyDRn88WtUXZdBvnnxoPv58sRfKxi0eH46lkueONv8Q
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "expectedStatuscode": "200",
+    "username": "di2etician102@gmail.com",
+    "password": "5260a4af1db34ebdbf34ab3facedc3d3",
+    "endpoint2": "/auth/login"
+}
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Tue, 01 Oct 2024 15:14:35 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "token": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJkaTJldGljaWFuMTAyQGdtYWlsLmNvbSIsInJvbGVzIjpbImRpZXRpY2lhbiJdLCJpYXQiOjE3Mjc3OTU2NzUsImV4cCI6MTcyNzc5NjI3NX0.Iqk93L5ws7Aicc0MWxGF84Mq0MQXcQZ9RMr31VxmJvHnhsFhJvAikdrereQer_JNsII5CT3_oXtxf0gWVNQoa2r2XuhtSDcbSAd9g_PTp6jhdTNi3Wmu22r3_eCRlJbyYgxctIENivftBKslmA3J6V5YhrG-CANZUm_-LPtZ_pI"
+}
