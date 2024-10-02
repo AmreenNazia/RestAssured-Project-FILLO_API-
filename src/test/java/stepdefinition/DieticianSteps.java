@@ -81,23 +81,26 @@ public class DieticianSteps extends RestUtils{
 	    if(dieticianpojo.getScenario().equalsIgnoreCase("valid_data01"))
 	    {
 	    	 String dieticianId = response.path("id");
-	    Tokens.dietIdMap.put(dieticianpojo.dieticianId, dieticianId);
+	    Tokens.dietIdMap.put(dieticianpojo.getDieticianId(), dieticianId);
 	 
 	    
 		}
 	    else if(dieticianpojo.getScenario().equalsIgnoreCase("valid_data02"))
 	    {
 	    String dieticianId01 = response.path("id");
-	    Tokens.dietIdMap.put(dieticianpojo.dieticianIdForPatient, dieticianId01); 
+	    Tokens.dietIdMap.put(dieticianpojo.getDieticianIdForPatient(), dieticianId01); 
 	    
 	       username = response.path("email");
 	       password = response.path("password");
 	       
 	       Tokens.dietcredentials.put("username",username);
 	       Tokens.dietcredentials.put("password", password);
+//	       System.out.println(Tokens.dietcredentials.get(dieticianpojo.getUsername()));
+	       
+	       
  
 	     	}
-		}
+	}
 	    
 	
 
