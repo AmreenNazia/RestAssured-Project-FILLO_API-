@@ -64,6 +64,7 @@ public class DieticianSteps extends RestUtils {
 		if (dieticianpojo.getScenario().equalsIgnoreCase("no_auth")) {
 			request = given().spec(requestSpecification()).body(reqbody);
 			response = request.when().post(dieticianpojo.getEndpoint());
+ 
 			response.then().log().all().extract();
 		} else {
 			request = given().spec(requestSpecification()).body(reqbody);
@@ -88,7 +89,7 @@ public class DieticianSteps extends RestUtils {
 
 		}
 	}
-
+ 
 	@Then("User validates with expected code and response body")
 	public void user_validates_with_expected_code_and_response_body() {
 

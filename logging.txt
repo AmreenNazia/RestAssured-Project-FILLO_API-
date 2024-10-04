@@ -22,12 +22,12 @@ Body:
 HTTP/1.1 200 
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 01 Oct 2024 15:14:35 GMT
+Date: Tue, 01 Oct 2024 18:03:48 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
 {
-    "token": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTcyNzc5NTY3NSwiZXhwIjoxNzI3Nzk2Mjc1fQ.Q3wI_iFAPrthu3EXatodzz3iDxs3rBgcmqzV8qigD0oalrvAmyLcYhgGTNb_l9DIAiaPeJnfhD_oy4ZTHjHZcUBVAZXYxWZFiSg9NFDERRejiwgZ_aRtPfvIBuErNEubsyDRn88WtUXZdBvnnxoPv58sRfKxi0eH46lkueONv8Q"
+    "token": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTcyNzgwNTgyOCwiZXhwIjoxNzI3ODA2NDI4fQ.TH5izoOSj9hUQyLWOJB5ZBUlDAJlVGHj7MMOWe5UQmOfa6BZb2FgezASp_Z7e_AK9ojdzok6Qr5oZOmsPe0Wv1QZ1U7Bvcp0OM1IpZlf60bNxEmo02pbczuEq2a0eNjg097Yk5_6iCMPIfVsN-LzlXyQtdkrgXsDpj4jH4qJFUo"
 }
 Request method:	POST
 Request URI:	http://localhost:8081/v1/dieticians
@@ -37,7 +37,7 @@ Query params:	<none>
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=application/json, application/javascript, text/javascript, text/json
-				Authorization=Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTcyNzc5NTY3NSwiZXhwIjoxNzI3Nzk2Mjc1fQ.Q3wI_iFAPrthu3EXatodzz3iDxs3rBgcmqzV8qigD0oalrvAmyLcYhgGTNb_l9DIAiaPeJnfhD_oy4ZTHjHZcUBVAZXYxWZFiSg9NFDERRejiwgZ_aRtPfvIBuErNEubsyDRn88WtUXZdBvnnxoPv58sRfKxi0eH46lkueONv8Q
+				Authorization=Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTcyNzgwNTgyOCwiZXhwIjoxNzI3ODA2NDI4fQ.TH5izoOSj9hUQyLWOJB5ZBUlDAJlVGHj7MMOWe5UQmOfa6BZb2FgezASp_Z7e_AK9ojdzok6Qr5oZOmsPe0Wv1QZ1U7Bvcp0OM1IpZlf60bNxEmo02pbczuEq2a0eNjg097Yk5_6iCMPIfVsN-LzlXyQtdkrgXsDpj4jH4qJFUo
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
@@ -48,7 +48,7 @@ Body:
     "lastName": "Kumar",
     "contactNumber": "209-929-6976",
     "dateOfBirth": "73/20/6770",
-    "email": "di2etician102@gmail.com",
+    "email": "di2etician00909@gmail.com",
     "hospitalName": "Joshephs",
     "hospitalStreet": "SE",
     "hospitalCity": "Chicago",
@@ -63,18 +63,18 @@ Body:
 HTTP/1.1 201 
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 01 Oct 2024 15:14:35 GMT
+Date: Tue, 01 Oct 2024 18:03:48 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
 {
-    "id": "b58565f0-e535-4543-be4e-b008552d5b40",
+    "id": "b7b47780-1c4b-4585-afd1-541f3d77ab7f",
     "firstName": "Dietician",
     "lastName": "Kumar",
     "contactNumber": "209-929-6976",
     "dateOfBirth": "73/20/6770",
-    "email": "di2etician102@gmail.com",
-    "password": "5260a4af1db34ebdbf34ab3facedc3d3",
+    "email": "di2etician00909@gmail.com",
+    "password": "0afb60f2f5b047088e440876a1c11678",
     "hospitalName": "Joshephs",
     "hospitalStreet": "SE",
     "hospitalCity": "Chicago",
@@ -105,12 +105,12 @@ Body:
 HTTP/1.1 200 
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 01 Oct 2024 15:14:35 GMT
+Date: Tue, 01 Oct 2024 18:03:48 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
 {
-    "token": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTcyNzc5NTY3NSwiZXhwIjoxNzI3Nzk2Mjc1fQ.Q3wI_iFAPrthu3EXatodzz3iDxs3rBgcmqzV8qigD0oalrvAmyLcYhgGTNb_l9DIAiaPeJnfhD_oy4ZTHjHZcUBVAZXYxWZFiSg9NFDERRejiwgZ_aRtPfvIBuErNEubsyDRn88WtUXZdBvnnxoPv58sRfKxi0eH46lkueONv8Q"
+    "token": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTcyNzgwNTgyOCwiZXhwIjoxNzI3ODA2NDI4fQ.TH5izoOSj9hUQyLWOJB5ZBUlDAJlVGHj7MMOWe5UQmOfa6BZb2FgezASp_Z7e_AK9ojdzok6Qr5oZOmsPe0Wv1QZ1U7Bvcp0OM1IpZlf60bNxEmo02pbczuEq2a0eNjg097Yk5_6iCMPIfVsN-LzlXyQtdkrgXsDpj4jH4qJFUo"
 }
 Request method:	POST
 Request URI:	http://localhost:8081/auth/login
@@ -120,24 +120,24 @@ Query params:	<none>
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=application/json, application/javascript, text/javascript, text/json
-				Authorization=Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTcyNzc5NTY3NSwiZXhwIjoxNzI3Nzk2Mjc1fQ.Q3wI_iFAPrthu3EXatodzz3iDxs3rBgcmqzV8qigD0oalrvAmyLcYhgGTNb_l9DIAiaPeJnfhD_oy4ZTHjHZcUBVAZXYxWZFiSg9NFDERRejiwgZ_aRtPfvIBuErNEubsyDRn88WtUXZdBvnnxoPv58sRfKxi0eH46lkueONv8Q
+				Authorization=Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlhdCI6MTcyNzgwNTgyOCwiZXhwIjoxNzI3ODA2NDI4fQ.TH5izoOSj9hUQyLWOJB5ZBUlDAJlVGHj7MMOWe5UQmOfa6BZb2FgezASp_Z7e_AK9ojdzok6Qr5oZOmsPe0Wv1QZ1U7Bvcp0OM1IpZlf60bNxEmo02pbczuEq2a0eNjg097Yk5_6iCMPIfVsN-LzlXyQtdkrgXsDpj4jH4qJFUo
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
     "expectedStatuscode": "200",
-    "username": "di2etician102@gmail.com",
-    "password": "5260a4af1db34ebdbf34ab3facedc3d3",
+    "username": "di2etician00909@gmail.com",
+    "password": "0afb60f2f5b047088e440876a1c11678",
     "endpoint2": "/auth/login"
 }
 HTTP/1.1 200 
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Tue, 01 Oct 2024 15:14:35 GMT
+Date: Tue, 01 Oct 2024 18:03:48 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
 {
-    "token": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJkaTJldGljaWFuMTAyQGdtYWlsLmNvbSIsInJvbGVzIjpbImRpZXRpY2lhbiJdLCJpYXQiOjE3Mjc3OTU2NzUsImV4cCI6MTcyNzc5NjI3NX0.Iqk93L5ws7Aicc0MWxGF84Mq0MQXcQZ9RMr31VxmJvHnhsFhJvAikdrereQer_JNsII5CT3_oXtxf0gWVNQoa2r2XuhtSDcbSAd9g_PTp6jhdTNi3Wmu22r3_eCRlJbyYgxctIENivftBKslmA3J6V5YhrG-CANZUm_-LPtZ_pI"
+    "token": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJkaTJldGljaWFuMDA5MDlAZ21haWwuY29tIiwicm9sZXMiOlsiZGlldGljaWFuIl0sImlhdCI6MTcyNzgwNTgyOCwiZXhwIjoxNzI3ODA2NDI4fQ.NKxTYdxQ7qQwdjTdN0E_8I-UoWrGLfjjBA4D4IKi7mxrAP8urGtVR6N8YKAZNC_mvW3-Y_uwy6lICKpIuUo6CPJ4xWQ217_M3STdGEk1KUkhbQrYeBFnzBP7FyPZrhq9p6qcBZDEqg5WO2QVMcgBztc9Pac9xj8F2EEq70eT5gc"
 }
